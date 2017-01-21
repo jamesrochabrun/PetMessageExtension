@@ -14,5 +14,6 @@ target 'PetChat' do
   use_frameworks!
 
   # Pods for PetChat
+pod 'Alamofire', '~> 4.3'
 
 end

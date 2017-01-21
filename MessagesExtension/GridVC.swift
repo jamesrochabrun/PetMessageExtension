@@ -8,6 +8,7 @@
 
 import UIKit
 import Messages
+import Alamofire
 
 class GridVC: MSMessagesAppViewController {
     
