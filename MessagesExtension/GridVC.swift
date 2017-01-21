@@ -9,15 +9,14 @@
 import UIKit
 import Messages
 
-class GridVC: MSMessagesAppViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class GridVC: MSMessagesAppViewController {
     
+    var gridLayout: GridLayout = GridLayout()
     var gridCollectionView: UICollectionView!
-    var gridLayout: GridLayout!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        gridLayout = GridLayout()
         gridCollectionView = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: gridLayout)
         gridCollectionView.delegate = self
         gridCollectionView.dataSource = self
@@ -46,21 +45,7 @@ class GridVC: MSMessagesAppViewController, UICollectionViewDataSource, UICollect
         // Dispose of any resources that can be recreated.
     }
     
-    //MARK: COLLECTIONVIEW
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageCell
-        cell.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.6392156863, blue: 0.7843137255, alpha: 1)
-        cell.imageView.image = UIImage.init(named: "puppy")
-        return cell
-    }
+
     
     // MARK: - Conversation Handling
     
@@ -126,5 +111,27 @@ class GridVC: MSMessagesAppViewController, UICollectionViewDataSource, UICollect
         // Pass the selected object to the new view controller.
     }
     */
-
 }
+
+extension GridVC : UICollectionViewDataSource, UICollectionViewDelegate{
+    
+    //MARK: COLLECTIONVIEW
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 50
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageCell
+        cell.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.6392156863, blue: 0.7843137255, alpha: 1)
+        cell.imageView.image = UIImage.init(named: "puppy")
+        return cell
+    }
+}
+
+
+
+

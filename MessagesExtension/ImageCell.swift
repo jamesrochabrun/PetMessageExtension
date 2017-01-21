@@ -18,7 +18,6 @@ class ImageCell: UICollectionViewCell {
         imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         contentView.addSubview(imageView)
-
     }
     
     override func layoutSubviews() {
