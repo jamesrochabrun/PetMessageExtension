@@ -10,13 +10,14 @@ import UIKit
 
 class ImageCell: UICollectionViewCell {
     
-    var imageView: UIImageView!
+    let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
         contentView.addSubview(imageView)
     }
     
@@ -29,6 +30,7 @@ class ImageCell: UICollectionViewCell {
         frame.origin.x = 0
         frame.origin.y = 0
         imageView.frame = frame
+
     }
     
     required init?(coder aDecoder: NSCoder) {

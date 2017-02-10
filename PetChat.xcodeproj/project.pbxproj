@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		687A337FE5A063A68569D4E1 /* Pods_MessagesExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6E9FBB3CB783A6E87BECB5 /* Pods_MessagesExtension.framework */; };
+		7BA187781E4D5B38008DEF35 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA187771E4D5B38008DEF35 /* Service.swift */; };
+		7BA1877A1E4D5DA7008DEF35 /* PetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA187791E4D5DA7008DEF35 /* PetImage.swift */; };
+		7BA1877C1E4D5F11008DEF35 /* GridDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA1877B1E4D5F11008DEF35 /* GridDataSource.swift */; };
 		7BCAF6FB1E33189A006B2697 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BCAF6FA1E33189A006B2697 /* Assets.xcassets */; };
 		7BCAF7021E33189A006B2697 /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7BCAF7011E33189A006B2697 /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7BCAF7071E33189A006B2697 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCAF7061E33189A006B2697 /* Messages.framework */; };
@@ -48,6 +51,9 @@
 		2C373A439D42E55F0C323AD9 /* Pods_PetChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6E9FBB3CB783A6E87BECB5 /* Pods_MessagesExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagesExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65EF8A9E8B2FF8C235E04B87 /* Pods-PetChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-PetChat/Pods-PetChat.release.xcconfig"; sourceTree = "<group>"; };
+		7BA187771E4D5B38008DEF35 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		7BA187791E4D5DA7008DEF35 /* PetImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetImage.swift; sourceTree = "<group>"; };
+		7BA1877B1E4D5F11008DEF35 /* GridDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridDataSource.swift; sourceTree = "<group>"; };
 		7BCAF6F71E33189A006B2697 /* PetChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCAF6FA1E33189A006B2697 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BCAF6FC1E33189A006B2697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,6 +103,41 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7BA187731E4D5832008DEF35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7BCAF71C1E331F8B006B2697 /* GridLayout.swift */,
+				7BCAF71E1E331FAB006B2697 /* ImageCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7BA187741E4D5840008DEF35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7BA187791E4D5DA7008DEF35 /* PetImage.swift */,
+				7BA1877B1E4D5F11008DEF35 /* GridDataSource.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7BA187751E4D5846008DEF35 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7BCAF7091E33189A006B2697 /* MessagesViewController.swift */,
+				7BCAF71A1E331F85006B2697 /* GridVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7BA187761E4D5B22008DEF35 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7BA187771E4D5B38008DEF35 /* Service.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		7BCAF6F01E33189A006B2697 = {
 			isa = PBXGroup;
 			children = (
@@ -139,10 +180,10 @@
 		7BCAF7081E33189A006B2697 /* MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
-				7BCAF7091E33189A006B2697 /* MessagesViewController.swift */,
-				7BCAF71A1E331F85006B2697 /* GridVC.swift */,
-				7BCAF71C1E331F8B006B2697 /* GridLayout.swift */,
-				7BCAF71E1E331FAB006B2697 /* ImageCell.swift */,
+				7BA187761E4D5B22008DEF35 /* Services */,
+				7BA187751E4D5846008DEF35 /* Controller */,
+				7BA187741E4D5840008DEF35 /* Model */,
+				7BA187731E4D5832008DEF35 /* View */,
 				7BCAF70B1E33189A006B2697 /* MainInterface.storyboard */,
 				7BCAF70E1E33189A006B2697 /* Assets.xcassets */,
 				7BCAF7101E33189A006B2697 /* Info.plist */,
@@ -337,10 +378,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BA1877C1E4D5F11008DEF35 /* GridDataSource.swift in Sources */,
 				7BCAF71D1E331F8B006B2697 /* GridLayout.swift in Sources */,
 				7BCAF71F1E331FAB006B2697 /* ImageCell.swift in Sources */,
+				7BA187781E4D5B38008DEF35 /* Service.swift in Sources */,
 				7BCAF71B1E331F85006B2697 /* GridVC.swift in Sources */,
 				7BCAF70A1E33189A006B2697 /* MessagesViewController.swift in Sources */,
+				7BA1877A1E4D5DA7008DEF35 /* PetImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

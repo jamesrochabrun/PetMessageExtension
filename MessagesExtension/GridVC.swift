@@ -12,33 +12,38 @@ import Messages
 
 class GridVC: MSMessagesAppViewController {
     
-    var gridLayout: GridLayout = GridLayout()
-    var gridCollectionView: UICollectionView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        gridCollectionView = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: gridLayout)
+    let gridLayout: GridLayout = GridLayout()
+
+    lazy var gridCollectionView: UICollectionView = {
+        let gridCollectionView = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: self.gridLayout)
         gridCollectionView.delegate = self
         gridCollectionView.dataSource = self
         gridCollectionView.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         gridCollectionView.showsVerticalScrollIndicator = false
         gridCollectionView.showsHorizontalScrollIndicator = false
-        self.gridCollectionView!.register(ImageCell.self, forCellWithReuseIdentifier: "cell")
+        gridCollectionView.register(ImageCell.self, forCellWithReuseIdentifier: "cell")
+        gridCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        return gridCollectionView
+    }()
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+ 
         self.view.addSubview(gridCollectionView)
-        
+        Service.sharedInstance.fetchHomeFeed { (gridDataSource) in
+            print(gridDataSource.images.count)
+        }
         // Do any additional setup after loading the view.
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
-        var frame = gridCollectionView.frame
-        frame.size.height = self.view.frame.size.height
-        frame.size.width = self.view.frame.size.width
-        frame.origin.x = 0
-        frame.origin.y = self.view.frame.minY
-        gridCollectionView.frame = frame
+        gridCollectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        gridCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        gridCollectionView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        gridCollectionView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -114,24 +119,25 @@ class GridVC: MSMessagesAppViewController {
     */
 }
 
-extension GridVC : UICollectionViewDataSource, UICollectionViewDelegate{
-    
-    //MARK: COLLECTIONVIEW
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageCell
-        cell.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.6392156863, blue: 0.7843137255, alpha: 1)
-        cell.imageView.image = UIImage.init(named: "puppy")
-        return cell
-    }
-}
+//extension GridVC : UICollectionViewDataSource, UICollectionViewDelegate{
+//    
+//    //MARK: COLLECTIONVIEW
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 50
+//    }
+//    
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return 1
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageCell
+//        cell.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.6392156863, blue: 0.7843137255, alpha: 1)
+//        cell.imageView.image = UIImage.init(named: "puppy")
+//        return cell
+//    }
+//}
+
 
 
 
