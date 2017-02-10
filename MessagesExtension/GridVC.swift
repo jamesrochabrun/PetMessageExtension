@@ -9,6 +9,7 @@
 import UIKit
 import Messages
 
+
 class GridVC: MSMessagesAppViewController {
     
     var gridLayout: GridLayout = GridLayout()

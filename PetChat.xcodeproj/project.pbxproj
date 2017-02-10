@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		687A337FE5A063A68569D4E1 /* Pods_MessagesExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6E9FBB3CB783A6E87BECB5 /* Pods_MessagesExtension.framework */; };
 		7BCAF6FB1E33189A006B2697 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BCAF6FA1E33189A006B2697 /* Assets.xcassets */; };
 		7BCAF7021E33189A006B2697 /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7BCAF7011E33189A006B2697 /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7BCAF7071E33189A006B2697 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCAF7061E33189A006B2697 /* Messages.framework */; };
@@ -16,6 +17,7 @@
 		7BCAF71B1E331F85006B2697 /* GridVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCAF71A1E331F85006B2697 /* GridVC.swift */; };
 		7BCAF71D1E331F8B006B2697 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCAF71C1E331F8B006B2697 /* GridLayout.swift */; };
 		7BCAF71F1E331FAB006B2697 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCAF71E1E331FAB006B2697 /* ImageCell.swift */; };
+		FC7EED7919299EC0CBF513C5 /* Pods_PetChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C373A439D42E55F0C323AD9 /* Pods_PetChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2C373A439D42E55F0C323AD9 /* Pods_PetChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C6E9FBB3CB783A6E87BECB5 /* Pods_MessagesExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagesExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65EF8A9E8B2FF8C235E04B87 /* Pods-PetChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-PetChat/Pods-PetChat.release.xcconfig"; sourceTree = "<group>"; };
 		7BCAF6F71E33189A006B2697 /* PetChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCAF6FA1E33189A006B2697 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BCAF6FC1E33189A006B2697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +60,9 @@
 		7BCAF71A1E331F85006B2697 /* GridVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridVC.swift; sourceTree = "<group>"; };
 		7BCAF71C1E331F8B006B2697 /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		7BCAF71E1E331FAB006B2697 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		9CE2787DBBCEE05510C9BCCB /* Pods-PetChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PetChat/Pods-PetChat.debug.xcconfig"; sourceTree = "<group>"; };
+		A7ED45953B5FE9BA0FC4CBCD /* Pods-MessagesExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagesExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		D0B887F421CF1C4FD1466AED /* Pods-MessagesExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagesExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +71,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BCAF7071E33189A006B2697 /* Messages.framework in Frameworks */,
+				687A337FE5A063A68569D4E1 /* Pods_MessagesExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B64AD6B0FA4DFF7B0FBA0AFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC7EED7919299EC0CBF513C5 /* Pods_PetChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F0A96B9D166CBFB1DD28A94 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7ED45953B5FE9BA0FC4CBCD /* Pods-MessagesExtension.debug.xcconfig */,
+				D0B887F421CF1C4FD1466AED /* Pods-MessagesExtension.release.xcconfig */,
+				9CE2787DBBCEE05510C9BCCB /* Pods-PetChat.debug.xcconfig */,
+				65EF8A9E8B2FF8C235E04B87 /* Pods-PetChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7BCAF6F01E33189A006B2697 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +104,7 @@
 				7BCAF7081E33189A006B2697 /* MessagesExtension */,
 				7BCAF7051E33189A006B2697 /* Frameworks */,
 				7BCAF6F81E33189A006B2697 /* Products */,
+				5F0A96B9D166CBFB1DD28A94 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				7BCAF7061E33189A006B2697 /* Messages.framework */,
+				2C6E9FBB3CB783A6E87BECB5 /* Pods_MessagesExtension.framework */,
+				2C373A439D42E55F0C323AD9 /* Pods_PetChat.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,8 +157,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BCAF7171E33189A006B2697 /* Build configuration list for PBXNativeTarget "PetChat" */;
 			buildPhases = (
+				37F236322E61081413DB2F32 /* [CP] Check Pods Manifest.lock */,
 				7BCAF6F51E33189A006B2697 /* Resources */,
 				7BCAF7161E33189A006B2697 /* Embed App Extensions */,
+				B64AD6B0FA4DFF7B0FBA0AFF /* Frameworks */,
+				5304F7315BFAFC625C70CDE0 /* [CP] Embed Pods Frameworks */,
+				5887717475099E1B580384EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BCAF7131E33189A006B2697 /* Build configuration list for PBXNativeTarget "MessagesExtension" */;
 			buildPhases = (
+				F9B22EBC4534B93E104E2562 /* [CP] Check Pods Manifest.lock */,
 				7BCAF6FD1E33189A006B2697 /* Sources */,
 				7BCAF6FE1E33189A006B2697 /* Frameworks */,
 				7BCAF6FF1E33189A006B2697 /* Resources */,
+				4E52E298FCE6EA91DDBC004A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -216,6 +253,84 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37F236322E61081413DB2F32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4E52E298FCE6EA91DDBC004A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5304F7315BFAFC625C70CDE0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PetChat/Pods-PetChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5887717475099E1B580384EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PetChat/Pods-PetChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9B22EBC4534B93E104E2562 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7BCAF6FD1E33189A006B2697 /* Sources */ = {
@@ -346,6 +461,7 @@
 		};
 		7BCAF7141E33189A006B2697 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7ED45953B5FE9BA0FC4CBCD /* Pods-MessagesExtension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				DEVELOPMENT_TEAM = ULU46F325W;
@@ -360,6 +476,7 @@
 		};
 		7BCAF7151E33189A006B2697 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0B887F421CF1C4FD1466AED /* Pods-MessagesExtension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				DEVELOPMENT_TEAM = ULU46F325W;
@@ -374,8 +491,9 @@
 		};
 		7BCAF7181E33189A006B2697 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CE2787DBBCEE05510C9BCCB /* Pods-PetChat.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ULU46F325W;
 				INFOPLIST_FILE = PetChat/Info.plist;
@@ -387,8 +505,9 @@
 		};
 		7BCAF7191E33189A006B2697 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65EF8A9E8B2FF8C235E04B87 /* Pods-PetChat.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ULU46F325W;
 				INFOPLIST_FILE = PetChat/Info.plist;
@@ -417,6 +536,7 @@
 				7BCAF7151E33189A006B2697 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7BCAF7171E33189A006B2697 /* Build configuration list for PBXNativeTarget "PetChat" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +545,7 @@
 				7BCAF7191E33189A006B2697 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -6,6 +6,8 @@ target 'MessagesExtension' do
   use_frameworks!
 
   # Pods for MessagesExtension
+    pod 'TRON', '~> 2.0.0'
+
 
 end
 
@@ -13,6 +15,5 @@ target 'PetChat' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for PetChat
 
 end
