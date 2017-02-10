@@ -30,7 +30,8 @@ class MessagesViewController: MSMessagesAppViewController {
         self.dogView.clipsToBounds = true
         self.dogView.isUserInteractionEnabled = true
         self.dogView.contentMode = .scaleAspectFit
-        self.dogView.image = #imageLiteral(resourceName: "puppy")
+        self.dogView.backgroundColor = UIColor.cyan
+       // self.dogView.image = #imageLiteral(resourceName: "puppy")
         
         let dogRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.selectDogOntap))
         dogView.addGestureRecognizer(dogRecognizer)
@@ -39,7 +40,8 @@ class MessagesViewController: MSMessagesAppViewController {
         self.catView.clipsToBounds = true
         self.catView.isUserInteractionEnabled = true
         self.catView.contentMode = .scaleAspectFit
-        self.catView.image = #imageLiteral(resourceName: "kitty")
+        self.catView.backgroundColor = UIColor.cyan
+        //self.catView.image = #imageLiteral(resourceName: "kitty")
         self.catView.layer.cornerRadius = self.imageViewWidth/2
         let catRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.selectCatOntap))
         catView.addGestureRecognizer(catRecognizer)

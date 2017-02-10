@@ -24,10 +24,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JGV-4f-1Jl">
                                 <rect key="frame" x="60" y="219" width="200" height="90"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puppy" translatesAutoresizingMaskIntoConstraints="NO" id="nvo-h3-h9w">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nvo-h3-h9w">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitty" translatesAutoresizingMaskIntoConstraints="NO" id="Jj3-qC-OIu">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jj3-qC-OIu">
                                         <rect key="frame" x="110" y="0.0" width="90" height="90"/>
                                     </imageView>
                                 </subviews>
@@ -132,8 +132,4 @@
             <point key="canvasLocation" x="295" y="139"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="kitty" width="16" height="16"/>
-        <image name="puppy" width="16" height="16"/>
-    </resources>
 </document>

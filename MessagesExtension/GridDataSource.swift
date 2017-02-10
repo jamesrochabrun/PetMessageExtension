@@ -16,29 +16,10 @@ class GridDataSource: JSONDecodable {
     
     required init(json: JSON) throws {
         
-        let imagesArray = json["users"].array
-        self.images = imagesArray!.map({PetImage(json: $0)})
+        print("jsonnnn: ", json)
+        let imagesArray = json["items"].array
+        self.images = imagesArray as? [PetImage]
     }
     
 }
 
-extension GridVC : UICollectionViewDataSource {
-    
-    
-    
-    //MARK: COLLECTIONVIEW
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageCell
-        cell.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.6392156863, blue: 0.7843137255, alpha: 1)
-        cell.imageView.image = UIImage.init(named: "puppy")
-        return cell
-    }
-}

@@ -12,13 +12,15 @@ import TRON
 
 struct Service {
     
-    let tron = TRON(baseURL: "https://api.letsbuildthatapp.com")
+    let tron = TRON(baseURL: "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?")
     
     static let sharedInstance = Service()
     
-    func fetchHomeFeed(completion: @escaping (GridDataSource) -> ()) {
+    func fetchGridFeed(completion: @escaping (GridDataSource) -> ()) {
         
-        let request: APIRequest<GridDataSource, JSONError> = tron.request("/twitter/home")
+        let request: APIRequest<GridDataSource, JSONError> = tron.request("/random/kitten")
+        
+        request.headers = ["tags": "animal", "format" : "json"]
         
         request.perform(withSuccess: { (gridDataSource) in
             completion(gridDataSource)

@@ -13,6 +13,7 @@ import Messages
 class GridVC: MSMessagesAppViewController {
     
     let gridLayout: GridLayout = GridLayout()
+    var gridDataSource: GridDataSource?
 
     lazy var gridCollectionView: UICollectionView = {
         let gridCollectionView = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: self.gridLayout)
@@ -31,10 +32,13 @@ class GridVC: MSMessagesAppViewController {
         super.viewDidLoad()
  
         self.view.addSubview(gridCollectionView)
-        Service.sharedInstance.fetchHomeFeed { (gridDataSource) in
-            print(gridDataSource.images.count)
+        Service.sharedInstance.fetchGridFeed { (gridDataSource) in
+            self.gridDataSource = gridDataSource
+            DispatchQueue.main.async {
+                self.gridCollectionView.reloadData()
+
+            }
         }
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillLayoutSubviews() {
@@ -50,8 +54,6 @@ class GridVC: MSMessagesAppViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     
     // MARK: - Conversation Handling
     
@@ -119,26 +121,25 @@ class GridVC: MSMessagesAppViewController {
     */
 }
 
-//extension GridVC : UICollectionViewDataSource, UICollectionViewDelegate{
-//    
-//    //MARK: COLLECTIONVIEW
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 50
-//    }
-//    
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 1
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageCell
-//        cell.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.6392156863, blue: 0.7843137255, alpha: 1)
-//        cell.imageView.image = UIImage.init(named: "puppy")
-//        return cell
-//    }
-//}
 
-
+extension GridVC : UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    //MARK: COLLECTIONVIEW
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return gridDataSource?.images.count ?? 0
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageCell
+        cell.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.6392156863, blue: 0.7843137255, alpha: 1)
+//        cell.imageView.image = UIImage.init(named: "")
+        return cell
+    }
+}
 
 
 
